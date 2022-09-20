@@ -3,7 +3,3 @@ channels:
 dependencies:
   - lammps
   - numpy
-  - matplotlib
-  - pip
-  - pip:
-    - nbgitpuller
