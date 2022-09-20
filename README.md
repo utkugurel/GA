@@ -1,3 +1,6 @@
-# Genetic Algoritms
+# Genetic Algorithms
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/utkugurel/GA.git/main?labpath=lectureGA.ipynb)
+Click here for the demonstration: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/utkugurel/GA.git/main?labpath=lectureGA.ipynb)
+
+The code is based on the repository https://github.com/patra-group/GA-code
+See the corresponding paper https://arxiv.org/pdf/2107.06439v1.pdf
