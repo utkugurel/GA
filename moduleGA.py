@@ -1,37 +1,38 @@
 def create_chain():
+    import numpy as np
     series = []
     ones = []
     twos = []
     while True:
-        tmp = input('Choose type: (1 or 2)')
+        tmp = input('Choose type: (0 or 1)')
         if (not tmp.isnumeric()):
             print('\nOnly integers are accepted\n')
             continue
         else:
             tmp = int(tmp)
         
-        if tmp == 1:
+        if tmp == 0:
             
             ones.append(tmp)
             if len(ones) == 45:
-                print('\nYou have 5 ones left\n')
+                print('\nYou have 5 zeros left\n')
             elif len(ones) == 50:
-                print('\nYou have no ones left\n')
+                print('\nYou have no zeros left\n')
             elif len(ones) > 50:
-                raise ValueError('You cannot have more than 50 ones')
+                raise ValueError('You cannot have more than 50 zeros')
         
-        elif tmp == 2:
+        elif tmp == 1:
             
             twos.append(tmp)
             if len(twos) == 45:
-                print('\nYou have 5 twos left\n')
+                print('\nYou have 5 ones left\n')
             elif len(twos) == 50:
-                print('\nYou have no twos left\n')
+                print('\nYou have no ones left\n')
             elif len(twos) > 50:
-                raise ValueError('You cannot have more than 50 twos')
+                raise ValueError('You cannot have more than 50 ones')
             
         else:
-            print('\nInput value can only be 1 or 2\n')
+            print('\nInput value can only be 0 or 1\n')
             continue
         
         series.append(tmp)
@@ -41,7 +42,8 @@ def create_chain():
             print('\nYou have successfully created your chain\n')
             break
         
-
+    series = np.array(series)
+    series += 1
     chain = [str(elem) for elem in series]
     with open('start.data', 'r+') as f:
             lines = f.readlines()
