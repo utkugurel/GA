@@ -1,5 +1,6 @@
 channels:
   - conda-forge
 dependencies:
+  - python=3.10.12
   - lammps
-  - numpy
+  - numpy=1.26.0
